@@ -17,10 +17,10 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(name);
         boolean ismatch= matcher.matches();
         if(ismatch){
-            System.out.println("Valid input");
+            System.out.println("Valid Last Name");
         }
         else{
-            System.out.println("Invalid Input");
+            System.out.println("Invalid Last Name");
         }
     }
     public static void emailId(String name ){
@@ -28,9 +28,9 @@ public class UserRegistration {
         Matcher match= pattern.matcher(name);
         boolean ismatch= match.matches();
         if(ismatch){
-            System.out.println("Valid input");
+            System.out.println("Valid Email");
         }else {
-            System.out.println("Inavaid input");
+            System.out.println("Inavaid Email");
         }
 
     }
@@ -43,7 +43,17 @@ public class UserRegistration {
         }else {
             System.out.println("Inavaid Number");
         }
-
+    }
+    public static void Password(String text){
+        Pattern pattern = Pattern.compile("^.{8,}$");
+        Matcher match = pattern.matcher(text);
+        boolean ismatch =match.matches();
+        if(ismatch){
+            System.out.println("Valid Password");
+        }
+        else{
+            System.out.println("Invalid Password");
+        }
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -55,9 +65,12 @@ public class UserRegistration {
         String email =sc.nextLine();
         //FirstName(name);
         //LastName(lastname);
-        emailId(email);
-        System.out.println("Enter Number: ");
-        String number= sc.nextLine();
-        phNumber(number);
+        //emailId(email);
+        //System.out.println("Enter Number: ");
+        //String number= sc.nextLine();
+        //phNumber(number);
+        System.out.println("Enter Password");
+        String password = sc.nextLine();
+        Password(password);
     }
 }
