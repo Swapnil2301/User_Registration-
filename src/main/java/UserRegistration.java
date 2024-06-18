@@ -45,7 +45,7 @@ public class UserRegistration {
         }
     }
     public static void Password(String text){
-        Pattern pattern = Pattern.compile("^(?=.*[A-Z]).{8,}$");
+        Pattern pattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$");
         Matcher match = pattern.matcher(text);
         boolean ismatch =match.matches();
         if(ismatch){
@@ -57,20 +57,20 @@ public class UserRegistration {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //System.out.println("Enter First Name");
-        //String name =sc.nextLine();
-        //System.out.println("Enter Last Name");
-        //String lastname =sc.nextLine();
-        //System.out.println("Enter Email:");
-        //String email =sc.nextLine();
-        //FirstName(name);
-        //LastName(lastname);
-        //emailId(email);
-        //System.out.println("Enter Number: ");
-        //String number= sc.nextLine();
-        //phNumber(number);
+        System.out.println("Enter First Name");
+        String name =sc.nextLine();
+        System.out.println("Enter Last Name");
+        String lastname =sc.nextLine();
+        System.out.println("Enter Email:");
+        String email =sc.nextLine();
+        FirstName(name);
+        LastName(lastname);
+        emailId(email);
+        System.out.println("Enter Number: ");
+        String number= sc.nextLine();
+        phNumber(number);
         System.out.println("Enter Password");
-        String password = sc.nextLine();
+        String password ="swapnilY1";
         Password(password);
     }
 }
