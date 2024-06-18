@@ -45,7 +45,7 @@ public class UserRegistration {
         }
     }
     public static void Password(String text){
-        Pattern pattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$");
+        Pattern pattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=.*\\d)[a-zA-Z\\d]{8,}$");
         Matcher match = pattern.matcher(text);
         boolean ismatch =match.matches();
         if(ismatch){
