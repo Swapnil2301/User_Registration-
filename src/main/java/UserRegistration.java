@@ -61,11 +61,14 @@ public class UserRegistration {
         String name =sc.nextLine();
         System.out.println("Enter Last Name");
         String lastname =sc.nextLine();
-        System.out.println("Enter Email:");
-        String email =sc.nextLine();
+        for (int i = 0; i < 4; i++) {
+            System.out.print("Enter the Email ID: ");
+            String email = sc.nextLine();
+            emailId(email);
+        }
         FirstName(name);
         LastName(lastname);
-        emailId(email);
+
         System.out.println("Enter Number: ");
         String number= sc.nextLine();
         phNumber(number);
